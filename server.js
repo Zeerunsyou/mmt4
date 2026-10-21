@@ -1,4 +1,5 @@
 const express = require("express");
+app.use(express.static("public"));
 const crypto = require("node:crypto");
 
 const app = express();
