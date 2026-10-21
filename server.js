@@ -1,8 +1,9 @@
 const express = require("express");
-app.use(express.static("public"));
 const crypto = require("node:crypto");
 
 const app = express();
+
+app.use(express.static("public"));
 app.use(express.json({ limit: "10kb" }));
 
 const PORT = process.env.PORT || 3000;
