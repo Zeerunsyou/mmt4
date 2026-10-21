@@ -69,4 +69,8 @@ app.post("/api/roblox/report", requireToken(ROBLOX_TOKEN), (req, res) => {
   res.json({ ok: true });
 });
 
-app.listen(PORT, () => console.log(`API listening on port ${PORT}`));
+if (require.main === module) {
+  app.listen(PORT, () => console.log(`API listening on port ${PORT}`));
+}
+
+module.exports = app;
